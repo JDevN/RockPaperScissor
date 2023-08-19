@@ -15,7 +15,8 @@ function getComputerChoice(choice){
 -Return a string that declares the winner of the round
 */
 
-const playerSelection = "Rock";
+
+const playerSelection = window.prompt("Select Rock, Paper, or Scissor: ");
 const computerSelection = getComputerChoice(computer_choice);
 
 console.log(playerSelection);
@@ -23,18 +24,45 @@ console.log(computerSelection);
 
 
 function play_one_round(playerSelection, computerSelection){
-    if(playerSelection==="Rock" && computerSelection==="Scissor"){
-        return "You Won! Rock beats Scissor";
+    if(playerSelection==="rock"){
+        if(playerSelection==="rock" && computerSelection==="scissor"){
+            return "You Won! Rock beats Scissor";
+        }
+        else if(playerSelection==="rock" && computerSelection==="paper"){
+            return "You Lose! Paper beats Rocks";
+        }
+        else{
+            return "Tie!";
+        }
     }
-    else if(playerSelection==="Rock" && computerSelection==="Paper"){
-        return "You Lose! Paper beats Rocks";
+    else if(playerSelection==="paper"){
+        if(playerSelection==="paper" && computerSelection==="scissor"){
+            return "You Lose! Scissor beats Paper";
+        }
+        else if(playerSelection==="paper" && computerSelection==="rock"){
+            return "You Win! Paper beats Rock";
+        }
+        else{
+            return "Tie!";
+        }
+    }
+    else if(playerSelection==="scissor"){
+        if(playerSelection==="scissor" && computerSelection==="paper"){
+            return "You Win! Scissor beats Paper";
+        }
+        else if(playerSelection==="scissor" && computerSelection==="rock"){
+            return "You Lose! Rock beats Paper";
+        }
+        else{
+            return "Tie!";
+        }
     }
     else{
-        return "Tie!";
+
     }
 }
 
-console.log(play_one_round(playerSelection, computerSelection));
+console.log(play_one_round(playerSelection.toLowerCase(), computerSelection.toLowerCase()));
 
 /*
 -Create a new function called game()
@@ -42,3 +70,4 @@ console.log(play_one_round(playerSelection, computerSelection));
     -Keep score
     -report a winner or loser at the end
 */
+
