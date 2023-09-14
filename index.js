@@ -52,7 +52,7 @@ function game(){
                 }
                 else if(playerSelection==="scissor" && computerSelection==="rock"){
                     computer_point++;
-                    return "You Lose! Rock beats Paper";
+                    return "You Lose! Rock beats Scissor";
                 }
                 else{
                     i--;
