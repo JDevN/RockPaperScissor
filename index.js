@@ -68,7 +68,7 @@ function play_one_round(playerSelection, computerSelection){
 }
 
 function game(){
-    // do{
+
 
         document.write("Select your choice");
         const computerSelection = getComputerChoice(computer_choice);
@@ -79,57 +79,7 @@ function game(){
 
         console.log(play_one_round(playerSelection, computerSelection));
 
-        // function play_one_round(playerSelection, computerSelection){
-        //     if(playerSelection === "rock"){
-        //         if(playerSelection === "rock" && computerSelection==="scissor"){
-        //             player_point++;
-        //             return "You Won! Rock beats Scissor";
-        //         }
-        //         else if(playerSelection ==="rock" && computerSelection==="paper"){
-        //             computer_point++;
-        //             return "You Lose! Paper beats Rocks";
-        //         }
-        //         else{
-        //             i--;
-        //             return "Tie!";
-        //         }
-        //     }
-        //     else if(playerSelection === "paper"){
-        //         if(playerSelection === "paper" && computerSelection==="scissor"){
-        //             computer_point++;
-        //             return "You Lose! Scissor beats Paper";
-        //         }
-        //         else if(playerSelection === "paper" && computerSelection==="rock"){
-        //             player_point++;
-        //             return "You Win! Paper beats Rock";
-        //         }
-        //         else{
-        //             i--;
-        //             return "Tie!";
-        //         }
-        //     }
-        //     else if(playerSelection === "scissor"){
-        //         if(playerSelection === "scissor" && computerSelection==="paper"){
-        //             player_point++;
-        //             return "You Win! Scissor beats Paper";
-        //         }
-        //         else if(playerSelection === "scissor" && computerSelection==="rock"){
-        //             computer_point++;
-        //             return "You Lose! Rock beats Scissor";
-        //         }
-        //         else{
-        //             i--;
-        //             return "Tie!";
-        //         }
-        //     }
-        //     else {
-        //         console.log("Wrong Input Try Again");
-        //         i--;
-        //     }
-        // }
-        // console.log(play_one_round(playerSelection.toLowerCase(), computerSelection.toLowerCase()));
-        // i++;
-    // }while(i < 5);
+
     console.log("Game Ended");
     console.log("Player has: " + player_point + " points");
     console.log("Computer has: " + computer_point + " points");
