@@ -15,7 +15,7 @@ function getComputerChoice(choice){
 function getPlayerChoice(choice){
     playerSelection = choice;
     console.log(playerSelection);
-    console.log(game());
+    game();
 }
 
 function play_one_round(playerSelection, computerSelection){
@@ -29,7 +29,6 @@ function play_one_round(playerSelection, computerSelection){
             return "You Lose! Paper beats Rocks";
         }
         else{
-            i--;
             return "Tie!";
         }
     }
@@ -43,7 +42,6 @@ function play_one_round(playerSelection, computerSelection){
             return "You Win! Paper beats Rock";
         }
         else{
-            i--;
             return "Tie!";
         }
     }
@@ -57,31 +55,32 @@ function play_one_round(playerSelection, computerSelection){
             return "You Lose! Rock beats Scissor";
         }
         else{
-            i--;
             return "Tie!";
         }
     }
     else {
         console.log("Wrong Input Try Again");
-        i--;
     }
+
 }
 
 function game(){
-
-
-        document.write("Select your choice");
         const computerSelection = getComputerChoice(computer_choice);
         // const playerSelection = getPlayerChoice(player_choice);
 
         console.log("Player Selected: " + playerSelection);
         console.log("Computer Selected: " + computerSelection);
 
-        console.log(play_one_round(playerSelection, computerSelection));
+        // console.log(play_one_round(playerSelection, computerSelection));
+
+        document.getElementById("output").innerHTML = play_one_round(playerSelection,computerSelection);
 
 
-    console.log("Game Ended");
     console.log("Player has: " + player_point + " points");
     console.log("Computer has: " + computer_point + " points");
+
+    document.getElementById("scoreboardPlayer").innerHTML = "Player has: " + player_point + " points";
+    document.getElementById("scoreboardComputer").innerHTML = "Computer has: " + computer_point + " points";
+
 }
 

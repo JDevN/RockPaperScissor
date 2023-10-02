@@ -7,11 +7,23 @@
 </head>
 <body>
     <script src="index.js"></script>
+    <div>
+        <h1>Rock Paper Scissor</h1>
+        <p>What will you choose</p>
+    </div>
     <div class="selectionContainer">
         <input type="button" value ="Rock" onclick="getPlayerChoice(value)">
         <input type="button" value ="Paper" onclick="getPlayerChoice(value)">
         <input type="button" value ="Scissor" onclick="getPlayerChoice(value)">
+    </div>
 
+    <div class="results">
+        <h1 id="output"></h1>
+    </div>
+
+    <div class="scoreboard">
+        <p id="scoreboardPlayer"></p>
+        <p id="scoreboardComputer"></p>
     </div>
 
 </body>
